@@ -3,8 +3,8 @@
 declare -a containers
 declare -a paths
 
-declare -r maintainer="Jonas Mauer <jam@kabelmail.net"
-declare -r registry_user="jam82"
+declare -r maintainer="Fabian Goebel <fgoebel@fgdo.de>"
+declare -r registry_user="fgoebel"
 
 fill_arrays() {
     containers=$(\

@@ -17,7 +17,7 @@ all: $(images)
 clean:
 	@echo -e "\e[93mCleaning up ... \e[0m"
 	@buildah unshare podman images --format "{{.ID}}" \
-		--filter label=maintainer="Jonas Mauer <jam@kabelmail.net" \
+		--filter label=maintainer="Fabian Goebel <fgoebel@fgdo.de>" \
 		| xargs -r podman rmi -f
 
 clean-unused:
