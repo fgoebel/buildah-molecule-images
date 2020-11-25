@@ -15,7 +15,16 @@ image_tag=$(basename "$0")
 repo_name="molecule-${image_name}"
 
 # Define packages to be installed
-packages="bash curl initscripts python sudo vim-minimal wget which"
+packages=" \
+    bash \
+    curl \
+    initscripts \
+    python3 \
+    sudo \
+    vim-minimal \
+    wget \
+    which \
+    "
 
 # Create a container
 container=$(buildah from docker.io/library/${image_name}:${image_tag})

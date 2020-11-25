@@ -15,8 +15,20 @@ image_tag=$(basename "$0")
 repo_name="molecule-${image_name}"
 
 # Define packages to be installed
-packages="awk bash curl grep procps-ng python sed sudo \
-    systemd-sysvcompat vim wget which"
+packages=" \
+    awk \
+    bash \
+    curl \
+    grep \
+    procps-ng \
+    python3 \
+    sed \
+    sudo \
+    systemd-sysvcompat \
+    vim \
+    wget \
+    which \
+    "
 
 # Create a container
 container=$(buildah from ${image_name}:${image_tag})
