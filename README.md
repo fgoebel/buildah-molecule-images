@@ -17,6 +17,13 @@ I use it on Manjaro (based on Archlinux).
 * GNU parallel (optional)
 * podman
 
+### Podman settings
+apt based images require 65536 subuid and subgid, set `/etc/subuid` and `/etc/subgid` like
+
+```bash
+yourusername:165536:65536
+```
+
 ## Usage
 
 TODO
