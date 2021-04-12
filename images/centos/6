@@ -38,6 +38,11 @@ buildah config --env container=docker ${container}
 # Volume definitions
 buildah config --volume /sys/fs/cgroup ${container}
 
+# Fix CentOS 6 Repos since it is EOL
+buildah run ${container} curl https://www.getpagespeed.com/files/centos6-eol.repo --output /etc/yum.repos.d/CentOS-Base.repo
+# Fix epel repos
+buildah run ${container} curl https://www.getpagespeed.com/files/centos6-epel-eol.repo --output /etc/yum.repos.d/epel.repo
+
 # Provision the container
 buildah run ${container} yum makecache fast
 buildah run ${container} yum -y update
